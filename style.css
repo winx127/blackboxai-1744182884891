@@ -1,0 +1,66 @@
+/* Color scheme */
+:root {
+    --color-primary: #a68a64;
+    --color-primary-dark: #8b6b46;
+    --color-beige-100: #f5f5dc;
+    --color-beige-300: #e6e6c3;
+    --color-brown-500: #8b4513;
+    --color-brown-600: #654321;
+    --color-brown-800: #4b3621;
+}
+
+.text-brown-500 { color: var(--color-brown-500); }
+.text-brown-600 { color: var(--color-brown-600); }
+.text-brown-800 { color: var(--color-brown-800); }
+.text-beige-100 { color: var(--color-beige-100); }
+.text-beige-300 { color: var(--color-beige-300); }
+
+/* Component styles */
+#timer {
+    background-color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    min-width: 200px;
+}
+
+#adminPanel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.notification {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Accessibility improvements */
+button:focus, input:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+input, button {
+    color-scheme: light;
+}
